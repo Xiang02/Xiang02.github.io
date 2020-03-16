@@ -1,0 +1,146 @@
+html, body {
+    position: relative;
+    height: 100%;
+  }
+  body {
+    background: #eee;
+    font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    color:#000;
+    margin: 0;
+    padding: 0;
+  }
+  .swiper-container {
+    width: 100%;
+    height: 100%;
+    z-index:1;
+    position:absolute;
+  }
+  .swiper-container img{
+    z-index:-1;
+    position:absolute;
+  }
+  .swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    /*background: #fff;
+    /* Center slide text vertically */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+  }
+  .swiper-wrapper{
+    -webkit-transition-timing-function:linear;
+    -o-transition-timing-function:linear; 
+    transition-timing-function:linear; 
+  }
+  .ImageBox{
+    height: 100%;
+    width: 100%;
+  }
+  .ImageBox img{
+    height: 40%;
+    width: auto;
+    border: 10px solid white;
+  }
+  .IB1 img{margin-top: 10%;}
+  .IB2 img{margin-bottom: 10%;bottom: 0;}
+  .IB3 img{margin-top: auto;margin-bottom: auto;top: 0;bottom: 0;}
+  .IB4 img{margin-bottom: 10%;bottom: 0;}
+  .IB5 img{margin-top: 10%;}
+  .IB6 img{margin-bottom: 10%;bottom: 0;}
+  .IB7 img{margin-top: auto;margin-bottom: auto;top: 0;bottom: 0;}
+  .cover{
+    background-color: rgba(56, 38, 38, 0.664);
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    z-index:2;
+    position:absolute;
+  }
+  .logo{
+    width: 20%;
+    height: 100%;
+    z-index: 3;
+    position: absolute;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    bottom: 10%;
+  }
+  .logo img{
+    width: 100%;
+    height: auto;
+    position: absolute;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
+  .main{
+    background-repeat: no-repeat;
+    background-color: rgb(0, 0, 0);
+    bottom: 0;
+    width: 100%;
+    height: 10%;
+    z-index:5;
+    position:absolute;
+  }
+  .btn{
+    float: left;
+    margin: 0;
+    padding: 0;
+    width: 20%;
+    height: 100%;
+    border: 0px solid;
+    background: none;
+    color: white;
+    font-family: sans-serif;
+    cursor: pointer;
+  }
+  .btn:hover
+  {
+    background: rgb(255, 0, 0);
+    color:white;
+    text-shadow: 0 0 5px black;
+    box-shadow: 0 0 5px red,
+                0 0 25px red,
+                0 0 50px red,
+                0 0 200px red;
+  }
+  .BTI
+  {
+    background-image: url("/Image/首頁/BG.png");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    width: 100%;
+    height: auto;
+    z-index: 4;
+    position: absolute;
+    margin-top: auto;
+    margin-bottom: 0;
+    top: 0;
+    bottom: 10%;
+    left: -100%;
+  }
+  .BTIB{
+
+    bottom: 0;
+    width: auto;
+    height: 100%;
+  }
+.bt1:hover .BTIB{
+  left: 0;
+}
