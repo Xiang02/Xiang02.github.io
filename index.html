@@ -6,47 +6,53 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
   <link rel="stylesheet" type="text/css" href="CSS\indexCSS.css">
 
+
+
+
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+
+
   <!-- Link Swiper's CSS -->
   <link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.css">
   <link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.min.css">
-
-  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 
   <!-- Demo styles -->
   <style>
   </style>
 </head>
 <body>
-  <!-- LOGO -->
-  <!--<div class="logo">
-    <img src="Image\首頁\cube.png">
-  </div> -->
-  <!-- ButtonImage -->
-  <!--<div class="BTI">
-    <img class="BTIB" id="hover_image" src="Image\首頁\自介.png" alt="">
-  </div>-->
-  <!-- Main -->
-  <div class="main">
-    <button class="btn bt1" onclick="location.href='個人資料.html'"><h2>個人資料</h2></button>
-    <button class="btn bt2" onclick="location.href='平面設計.html'"><h2>平面設計</h2></button>
-    <button class="btn bt3" onclick="location.href='影片剪輯.html'"><h2>影片剪輯</h2></button>
-    <button class="btn bt4" onclick="location.href='網頁設計.html'"><h2>網頁設計</h2></button>
-    <button class="btn bt5" onclick="location.href='程式設計.html'"><h2>程式設計</h2></button>
-  </div>
-  <!-- cover -->
-  <div class="cover"></div>
-  <!-- Swiper -->
-  <div class="swiper-container">
-    <img src="Image\首頁\Code-1076536.jpg" alt="">
-    <div class="swiper-wrapper">
-      <div class="swiper-slide"><div class="ImageBox IB1"><img src="Image\首頁\性別刻板印象比賽.png" alt=""></div></div>
-      <div class="swiper-slide"><div class="ImageBox IB2"><img src="Image\首頁\背景描繪.jpg" alt=""></div></div>
-      <div class="swiper-slide"><div class="ImageBox IB3"><img src="Image\首頁\海上車站.jpg" alt=""></div></div>
-      <div class="swiper-slide"><div class="ImageBox IB4"><img src="Image\首頁\單點透視練習1.jpg" alt=""></div></div>
-      <div class="swiper-slide"><div class="ImageBox IB5"><img src="Image\首頁\Game02.png" alt=""></div></div>
-      <div class="swiper-slide"><div class="ImageBox IB6"><img src="Image\首頁\WebC01.PNG" alt=""></div></div>
-      <div class="swiper-slide"><div class="ImageBox IB7"><img src="Image\首頁\水墨風格蓮花.jpg" alt=""></div></div>
+  <div class="BG"><img src="Image\首頁\Code-1076536.jpg" alt=""></div>
+  <div class="container-fluid p-0">
+
+    <!-- Main -->
+    <div class="main fixed-bottom">
+      <button class="btn bt1 btn-dark" onclick="location.href='個人資料.html'"><h2>個人資料</h2></button>
+      <button class="btn bt2 btn-dark" onclick="location.href='平面設計.html'"><h2>平面設計</h2></button>
+      <button class="btn bt3 btn-dark" onclick="location.href='影片剪輯.html'"><h2>影片剪輯</h2></button>
+      <button class="btn bt4 btn-dark" onclick="location.href='網頁設計.html'"><h2>網頁設計</h2></button>
+      <button class="btn bt5 btn-dark" onclick="location.href='程式設計.html'"><h2>程式設計</h2></button>
     </div>
+
+    <!-- cover -->
+    <div class="cover"></div>
+
+    <!-- Swiper -->
+    <div class="SlideBox flex-column">
+      <div class="swiper-container">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide"><div class="ImageBox IB1"><div class="ImageBox-Item"><img src="Image\首頁\性別刻板印象比賽.png"></div></div></div>
+          <div class="swiper-slide"><div class="ImageBox IB2"><div class="ImageBox-Item"><img src="Image\首頁\背景描繪.jpg"></div></div></div>
+          <div class="swiper-slide"><div class="ImageBox IB3"><div class="ImageBox-Item"><img src="Image\首頁\海上車站.jpg"></div></div></div>
+          <div class="swiper-slide"><div class="ImageBox IB4"><div class="ImageBox-Item"><img src="Image\首頁\單點透視練習1.jpg"></div></div></div>
+          <div class="swiper-slide"><div class="ImageBox IB5"><div class="ImageBox-Item"><img src="Image\首頁\Game02.png"></div></div></div>
+          <div class="swiper-slide"><div class="ImageBox IB6"><div class="ImageBox-Item"><img src="Image\首頁\WebC01.PNG"></div></div></div>
+          <div class="swiper-slide"><div class="ImageBox IB7"><div class="ImageBox-Item"><img src="Image\首頁\水墨風格蓮花.jpg"></div></div></div>
+        </div>
+      </div>    
+     </div>
   </div>
 
   <!-- Swiper JS -->
@@ -66,10 +72,6 @@
         delay: 1,
       },
     });
-  </script>
-    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-  <script>
-    AOS.init();
   </script>
 </body>
 </html>
