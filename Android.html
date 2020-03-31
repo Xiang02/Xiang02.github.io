@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-    <title>程式設計</title>
+    <title>Android</title>
     <link rel="stylesheet" type="text/css" href="CSS\分頁CSS.css">
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
@@ -20,7 +20,7 @@
             <div class="inner">
                 <div class="row r1">
                     <div class="col text-left tt">
-                        <h1 display-2>程式設計</h1>
+                        <h1 display-2>Android</h1>
                     </div>
                     <div class="col text-right">
                         <button class="navbar-toggler" data-toggle="collapse" data-target="#collapse_target">
@@ -67,12 +67,49 @@
             </nav>    
         </header>
         <main role="main" class="inner cover">
-            <div class="r2">
-                <div data-aos="flip-left" data-aos-duration="1000" class="jumbotron">
-                    <button type="button" class="btn btn-outline-primary btn-lg btn-block" style="padding: 5rem;" onclick="location.href='Android.html'">Android</button>
-                </div>
-                <div data-aos="flip-right" data-aos-duration="1000" class="jumbotron">
-                    <button type="button" class="btn btn-outline-primary btn-lg btn-block" style="padding: 5rem;" onclick="location.href='PC.html'">PC</button>
+            <div class="r2 d-flex flex-column">
+                <div class="jumbotron"  style="color: black;">
+                    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                        <ol class="carousel-indicators">
+                          <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                          <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                          <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                          <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
+                          <li data-target="#carouselExampleIndicators" data-slide-to="4"></li>
+                          <li data-target="#carouselExampleIndicators" data-slide-to="5"></li>
+                        </ol>
+                        <div class="carousel-inner">
+                          <div class="carousel-item active app-h">
+                            <img src="Image\程式設計\APP01.png" class="d-block" alt="...">
+                          </div>
+                          <div class="carousel-item app-h">
+                            <img src="Image\程式設計\APP02.png" class="d-block" alt="...">
+                          </div>
+                          <div class="carousel-item app-h">
+                            <img src="Image\程式設計\APP03.png" class="d-block" alt="...">
+                          </div>
+                          <div class="carousel-item app-h">
+                            <img src="Image\程式設計\APP04.png" class="d-block" alt="...">
+                          </div>
+                          <div class="carousel-item app-h">
+                            <img src="Image\程式設計\APP05.png" class="d-block" alt="...">
+                          </div>
+                          <div class="carousel-item app-h">
+                            <img src="Image\程式設計\APP06.png" class="d-block" alt="...">
+                          </div>
+                        </div>
+                        <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                          <span class="sr-only">Previous</span>
+                        </a>
+                        <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                          <span class="sr-only">Next</span>
+                        </a>
+                    </div>
+                    <hr class="my-4">
+                    <h1 class="display-4 text-left">苗栗美食<span class="badge badge-pill badge-warning badge-secondary">Tool</span></h1>
+                    <p class="text-left">使用App Inventor製作，在這個好山好水的地方想找好吃的東西卻不知道怎麼辦，此APP可以協助您尋找到您喜愛的餐點。</p>
                 </div>
             </div>    
         </main>

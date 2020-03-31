@@ -1,0 +1,235 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>木炭50收</title>
+
+<script src="carouselengine/jquery.js"></script>
+    <script src="carouselengine/amazingcarousel.js"></script>
+    <link rel="stylesheet" type="text/css" href="carouselengine/initcarousel-1.css">
+    <style type="text/css">
+    body,td,th {
+	color: #F00;
+}
+    </style>
+    <script src="carouselengine/initcarousel-1.js"></script>
+<script type="text/javascript" src="cloudzoom.js"></script>
+<link rel="stylesheet" type="text/css" href="cloudzoom.css" />
+<style type="text/css">
+#apDiv1 {
+	position: absolute;
+	width: 200px;
+	height: 115px;
+	z-index: 1;
+}
+#apDiv2 {
+	position: absolute;
+	width: 200px;
+	height: 115px;
+	z-index: 1;
+	left: 10px;
+}
+</style>
+<script type="text/javascript">
+CloudZoom.quickStart();
+function MM_findObj(n, d) { //v4.01
+  var p,i,x;  if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+  if(!x && d.getElementById) x=d.getElementById(n); return x;
+}
+
+function flevDivPositionValue(sDiv, sProperty) { // v2.1, Marja Ribbers-de Vroed, FlevOOware
+	this.opera = (window.opera); // Opera 5+
+	this.ns4 = (document.layers); // Netscape 4.x
+	this.ns6 = (document.getElementById && !document.all && !this.opera); // Netscape 6+
+	this.ie = (document.all);  // Internet Explorer 4+
+    var sValue = ""; docObj = eval("MM_findObj('" + sDiv + "')"); if (docObj == null) {return 0;}
+	if ((sProperty == "left") || (sProperty == "top")) {
+		if (!this.ns4) {docObj = docObj.style;} 
+		sValue = eval("docObj." + sProperty);
+		if ((this.ie) && (sValue == "")) { // IE (on PC) bug with nested layers
+			if (sProperty == "top") { sValue = eval(sDiv + ".offsetTop"); } 
+			else { sValue = eval(sDiv + ".offsetLeft"); } 
+		};
+	}
+	else {
+		if (this.opera) {
+			docObj = docObj.style;
+			if (sProperty == "height") { sValue = docObj.pixelHeight; } 
+			else if (sProperty == "width") { sValue = docObj.pixelWidth; } 
+		}
+		else if (this.ns4) {sValue = eval("docObj.clip." + sProperty);} 
+		else if (this.ns6) {sValue = document.defaultView.getComputedStyle(docObj, "").getPropertyValue(sProperty); } 
+	    else if (this.ie) { 
+			if (sProperty == "width") { sValue = eval(sDiv + ".offsetWidth"); } 
+			else if (sProperty == "height") { sValue = eval(sDiv + ".offsetHeight"); } 
+		}
+   	}
+	sValue = (sValue == "") ? 0 : sValue; 
+	if (isNaN(sValue)) { if (sValue.indexOf('px') > 0) { sValue = sValue.substring(0,sValue.indexOf('px')); } } 
+	return parseInt(sValue); 
+}
+
+function flevPersistentLayer() { // v3.3, Marja Ribbers-de Vroed, FlevOOware
+	var sD = arguments[0], oD = eval("MM_findObj('" + sD + "')"), iWW, iWH, iSX, iSY, iT = 10, sS = "";
+	if (!document.layers) {oD = oD.style;}
+	if (oD.tmpTimeout != null) {clearTimeout(oD.tmpTimeout);}
+	var sXL = arguments[1], sXC = arguments[2], sXR = arguments[3], sYT = arguments[4], sYC = arguments[5], sYB = arguments[6];
+	var iS = (arguments.length > 7) ? parseInt(arguments[7]) : 0, iPx = (arguments.length > 8) ? parseInt(arguments[8]) : 0;
+	if (window.innerWidth) { // NS4, NS6 and Opera
+		var oW = window; iWW = oW.innerWidth; iWH = oW.innerHeight; iSX = oW.pageXOffset; iSY = oW.pageYOffset; }
+	else if (document.documentElement && document.documentElement.clientWidth) { // IE6 in standards compliant mode
+		var oDE = document.documentElement; iWW = oDE.clientWidth; iWH = oDE.clientHeight; iSX = oDE.scrollLeft; iSY = oDE.scrollTop; }
+	else if (document.body) { // IE4+
+		var oDB = document.body; iWW = oDB.clientWidth; iWH = oDB.clientHeight; iSX = oDB.scrollLeft; iSY = oDB.scrollTop; }
+	else {return;}
+	var iCX = iNX = flevDivPositionValue(sD, 'left'), iCY = iNY = flevDivPositionValue(sD, 'top');
+	if (sXL != "") {iNX = iSX + parseInt(sXL);} 
+	else if (sXC != "") {iNX = Math.round(iSX + (iWW/2) - (flevDivPositionValue(sD, 'width')/2));}
+	else if (sXR != "") {iNX = iSX + iWW - (flevDivPositionValue(sD, 'width') + parseInt(sXR));}
+	if (sYT != "") {iNY = iSY + parseInt(sYT);}
+	else if (sYC != "") {iNY = Math.round(iSY + (iWH/2) - (flevDivPositionValue(sD, 'height')/2));}
+	else if (sYB != "") {iNY = iSY + (iWH - flevDivPositionValue(sD, 'height') - parseInt(sYB));}
+	if ((iCX != iNX) || (iCY != iNY)) {
+		if (iS > 0) {
+			if (iPx > 0) { iT = iS;
+				var iPxX = iPx, iPxY = iPx, iMX = Math.abs(iCX - iNX), iMY = Math.abs(iCY - iNY);
+				// take care of diagonal movement
+				if (iMX < iMY) {iPxY = (iMX != 0) ? ((iMY/iMX)*iPx) : iPx;}
+				else {iPxX = (iMY != 0) ? ((iMX/iMY)*iPx) : iPx;}
+				if (iPxX >= iMX) {iPxX = Math.min(Math.ceil(iPxX), iPx);}
+				if (iPxY >= iMY) {iPxY = Math.min(Math.ceil(iPxY), iPx);}
+				// temporary X/Y coordinates
+				if ((iCX < iNX) && (iCX + iPxX < iNX)) {iNX = iCX + iPxX;}
+				if ((iCX > iNX) && (iCX - iPxX > iNX)) {iNX = iCX - iPxX;}
+				if ((iCY < iNY) && (iCY + iPxY < iNY)) {iNY = iCY + iPxY;}
+				if ((iCY > iNY) && (iCY - iPxY > iNY)) {iNY = iCY - iPxY;} }
+			else { 
+				var iMX = ((iNX - iCX) / iS), iMY = ((iNY - iCY) / iS); 
+				iMX = (iMX > 0) ? Math.ceil(iMX) : Math.floor(iMX); iNX = iCX + iMX; 
+				iMY = (iMY > 0) ? Math.ceil(iMY) : Math.floor(iMY); iNY = iCY + iMY; } }
+		if ((parseInt(navigator.appVersion)>4 || navigator.userAgent.indexOf("MSIE")>-1) && (!window.opera)) {sS="px";}
+		if (iMX != 0) {eval("oD.left = '" + iNX + sS + "'");}
+		if (iMY != 0) {eval("oD.top = '" + iNY + sS + "'");} }
+	var sF = "flevPersistentLayer('" + sD + "','" + sXL + "','" + sXC + "','" + sXR + "','" + sYT + "','" + sYC + "','" + sYB + "'," + iS + "," + iPx + ")";
+	oD.tmpTimeout = setTimeout(sF,10);
+}
+
+function flevInitPersistentLayer() { // v3.3, Marja Ribbers-de Vroed, FlevOOware
+	if (arguments.length < 8) {return;}
+	var sD = arguments[0]; if (sD == "") {return;}
+	var	oD = eval("MM_findObj('" + sD + "')"); if (!oD) {return;}
+	var iCSS = parseInt(arguments[1]);
+	var sXL = arguments[2], sXC = arguments[3], sXR = arguments[4], sYT = arguments[5], sYC = arguments[6], sYB = arguments[7];
+	var iS = (arguments.length > 8) ? parseInt(arguments[8]) : 0, iPx = (arguments.length > 9) ? parseInt(arguments[9]) : 0;
+	if (iCSS != 0) { if (!document.layers) {oD = oD.style;} sXL = parseInt(oD.left), sYT = parseInt(oD.top);}
+	var sF = "flevPersistentLayer('" + sD + "','" + sXL + "','" + sXC + "','" + sXR + "','" + sYT + "','" + sYC + "','" + sYB + "'," + iS + "," + iPx + ")";
+	eval(sF);
+}
+</script> 
+
+
+</head>
+
+<body bgcolor="#000" onload="flevInitPersistentLayer('apDiv2',0,'','','0','','1','',10)">
+<div id="apDiv2"><a href="javascript:d=document;s=d.createElement('script');s.src='https://anohito.tw/thisUnitIsAFlippinPlatelet/flippin_platelet.js';b=d.getElementsByTagName('body')[0];b.appendChild(s);void(0);"><img src="image/2808.png_1200.png" width="126" height="126" /></a></div>
+<div><marquee>「珍愛生命，希望無限」</marquee> </div>
+<div id="amazingcarousel-container-1">
+  <div id="amazingcarousel-1" style="display:none;position:relative;width:100%;max-width:720px;margin:0px auto 0px;">
+        <div class="amazingcarousel-list-container">
+            <ul class="amazingcarousel-list">
+                <li class="amazingcarousel-item">
+                    <div class="amazingcarousel-item-container">
+<div class="amazingcarousel-image"><a href="images/4329629_B-lightbox.jpg" title="4329629_B"  class="html5lightbox" data-group="amazingcarousel-1"><img src="images/4329629_B.jpg"  alt="4329629_B" /></a></div>
+<div class="amazingcarousel-title">4329629_B</div>                    </div>
+                </li>
+                <li class="amazingcarousel-item">
+                    <div class="amazingcarousel-item-container">
+<div class="amazingcarousel-image"><a href="images/5897296_B-lightbox.jpg" title="5897296_B"  class="html5lightbox" data-group="amazingcarousel-1"><img src="images/5897296_B.jpg"  alt="5897296_B" /></a></div>
+<div class="amazingcarousel-title">5897296_B</div>                    </div>
+                </li>
+                <li class="amazingcarousel-item">
+                    <div class="amazingcarousel-item-container">
+<div class="amazingcarousel-image"><a href="images/26084314103_84f10661d6_b-lightbox.jpg" title="26084314103_84f10661d6_b"  class="html5lightbox" data-group="amazingcarousel-1"><img src="images/26084314103_84f10661d6_b.jpg"  alt="26084314103_84f10661d6_b" /></a></div>
+<div class="amazingcarousel-title">26084314103_84f10661d6_b</div>                    </div>
+                </li>
+                <li class="amazingcarousel-item">
+                    <div class="amazingcarousel-item-container">
+<div class="amazingcarousel-image"><a href="images/4936695897631-lightbox.jpg" title="4936695897631"  class="html5lightbox" data-group="amazingcarousel-1"><img src="images/4936695897631.jpg"  alt="4936695897631" /></a></div>
+<div class="amazingcarousel-title">4936695897631</div>                    </div>
+                </li>
+                <li class="amazingcarousel-item">
+                    <div class="amazingcarousel-item-container">
+<div class="amazingcarousel-image"><a href="images/e69ca8e782ad-01-e6ada3-lightbox.jpg" title="e69ca8e782ad-01-e6ada3"  class="html5lightbox" data-group="amazingcarousel-1"><img src="images/e69ca8e782ad-01-e6ada3.jpg"  alt="e69ca8e782ad-01-e6ada3" /></a></div>
+<div class="amazingcarousel-title">e69ca8e782ad-01-e6ada3</div>                    </div>
+                </li>
+            </ul>
+            <div class="amazingcarousel-prev"></div>
+            <div class="amazingcarousel-next"></div>
+        </div>
+        <div class="amazingcarousel-nav"></div>
+        <div class="amazingcarousel-engine"><a href="http://amazingcarousel.com">JavaScript Carousel</a></div>
+  </div>
+</div>
+
+<div>
+
+  <div>
+    <pre> </pre></div>
+  <div><center> <img class = "cloudzoom" src = "images/small/image1.jpg"
+             data-cloudzoom = "zoomImage: 'images/large/image1.jpg'" />
+        <br/>
+        <img class = 'cloudzoom-gallery' src = "images/thumbs/image1.jpg" data-cloudzoom = "useZoom: '.cloudzoom', image: 'images/small/image1.jpg', zoomImage: 'images/large/image1.jpg' " >
+        <img class = 'cloudzoom-gallery' src = "images/thumbs/image2.jpg" data-cloudzoom = "useZoom: '.cloudzoom', image: 'images/small/image2.jpg', zoomImage: 'images/large/image2.jpg' " >
+        <img class = 'cloudzoom-gallery' src = "images/thumbs/image3.jpg" data-cloudzoom = "useZoom: '.cloudzoom', image: 'images/small/image3.jpg', zoomImage: 'images/large/image3.jpg' " >
+  </center> 
+  </div>
+  <div>
+    <p>木炭是木材或木質原料經過不完全燃燒或者在隔絕空氣的條件下熱解的主要產物之一，保持了木材原本的構造之不純含碳物質，通常為深褐色或黑色多孔固體，一般用於燃料炭。
+      
+      木炭價格便宜，易燃，使用簡單和易購得。若再經過高溫處理，即可變成白炭，如日本的備長炭。
+      
+      此外，木炭也運用於研磨、繪畫、化妝、醫藥、除臭、除濕以及火藥、滲碳、粉末合金等方面。  </p>木炭是一種歷史悠久的燃料，廣泛應用於人民生活和工業生產。中國商朝的青銅器和春秋戰國時代鐵器的冶煉都用木炭；也曾利用其吸濕性能來觀測氣候變化和用作棺槨的防護劑。現在除大量用作生活燃料外，還用作金屬冶煉、食品和輕工業等的燃料。此外還是電爐冶煉的還原劑。在金屬精製時則用作覆蓋劑來保護金屬不被氧化。在化學工業上，由於木炭雜質少，有良好的化學反應性以及活化後有很好的吸附性能，常作二硫化碳、硫化鈉、氰化鈉和活性炭的原料。此外，木炭在研磨、繪畫、化妝、醫藥以及火藥、滲碳、粉末合金等方面也有用處。 <p></p>種類按燒炭用的原料可分為三種：
+
+    硬闊木炭
+    主要是用硬闊葉材（殼斗科櫟屬、栲屬等）。用樺木屬木材燒製的炭，俗稱櫟炭、岡炭、柞炭等。其中材種較堅實的為用青岡櫟和烏岡櫟等燒製的炭，又稱為青（岡）炭或烏岡炭等。
+    闊葉木炭
+    是用硬、軟闊葉材混合燒製的炭。俗稱雜木炭。
+    松木炭
+    是用松木或其他針葉材燒製的炭。
+
+此外還有用竹類燒製的竹炭和用果殼、果核（椰子殼、桃核）等木質原料燒製的果核炭。
+
+從家用爐灶中收取的柴炭則俗稱桴炭。
+
+如將木炭粉碎後拌以適當的粘合劑，再進行壓積成型和焙燒，可製成壓積炭，具有容重大，火力強，破碎率小和使用方便等優點。
+
+木炭按燒炭工藝則可分為白炭和黑炭。 <p></p>燒炭工藝要求控制薪材受熱的溫度、時間和氧氣等炭化條件。最原始的工藝是堆燒法，操作粗放，炭化條件不易控制，因此質、量都很差。目前普遍應用的工藝是窯燒法，可控制炭化條件以​​保證木炭燒製的質和量。
+
+中國的黑炭燒製工藝是薪材在窯內炭化後，隔絕空氣進行冷卻。白炭燒製是在木炭赤熱時取出窯外與空氣接觸，利用熱解生成的揮發物燃燒時的高溫進行精煉後，再行覆蓋冷卻，不僅有較高的固定碳，而且表面附有殘留的白色灰分，因而得名。
+
+炭窯的型式很多，從最簡單的土窯到現代化的連續作業窯（立式、臥式）都有。中國以土窯為主，著名的有浙江的縉雲鯉魚窯、青田瓜瓢窯、福建的永泰白炭窯等。此外，還有適應林區廢材分散特點的移動式炭化爐。木炭也可從木材乾餾工業製得。成分和性質木炭除含碳素外，還含有氫、氧、氮以及少量的其他元素。其含量與樹種的關係不大，主要取決於炭化的最終溫度。
+
+木炭的性質受工藝和材種的影響很大，表現在以下幾方面：
+
+    木炭屬憎水性物質，正常存放時含水量一般在7％以下。其吸濕的程度受空氣中相對濕度和木炭表面氧化程度的影響。木炭與水接觸時的吸水能力取決於其結構特性和表面浸潤的情況，能吸收超過它本身重量的水分。
+    灰分的含量和組成受材種、炭化工藝，以及採伐運輸等的影響。含量一般在 6％以內。
+    木炭被加熱到高於熱解溫度時，會分解出揮發性的氣體。經高溫(850～950℃)煅燒幾分鐘後所殘留的碳稱為固定碳，在高溫條件下使用時，不再揮發，可以全部參加反應。它是木炭中最主要的成分。中國林業部規定東北工業用木炭按不同燒炭原料規定的固定碳指標介於百分之70至86之間。
+    木炭的真比重主要與煅燒溫度有關，與樹種關係不大，一般在1.3～1.4之間；視比重一般在0.2～0.5之間，不僅因樹種而異，且受孔隙度影響。通常木炭的孔隙佔木炭體積7％以上,受樹種、生長部位和炭化工藝等的影響。
+    木炭的比熱容取決於加熱溫度和木炭的質量，隨溫度的上升而增大。蘇聯測定結果是平均1046.7 ～1214.172焦／(千克·開)，熱導率是9952瓦／（米·開）。發熱量取決於炭化條件，一般33.5兆焦左右。炭化溫度越高則發熱量越大。
+    碳素的反應性，即在高溫下與活性氣體和蒸氣相互作用的能力，是評價固體原料在工業中使用的基本性質之一，與其所含碳素的無定形多孔結構有關。其中所含的灰分，尤其是鹼金屬、鹼土金屬及其氧化物的存在，對木炭的化學反應能力也起催化作用。因此，木炭的還原能力比焦炭大得多。常用作金屬冶煉的還原劑和覆蓋劑。
+    由於木材構造的各方面受熱收縮不相同，木炭會產生裂縫，影響強度。木炭沿纖維縱向的抗壓強度，接近甚至達到焦炭的強度，而沿纖維橫向的抗壓強度，則僅是焦炭的1／4～1／6。此外，木炭的磨損強度低，也影響它的使用。
+    木炭的比電阻相當大，約等於1010～1012歐·厘米。順纖維方向僅為垂直方向的1／3～1／5。
+    木炭中存在的大量微孔和過渡孔使它不僅有較高的比表面積，而且孔內焦油物質被排除後有很好的吸附性能，所以是製備活性炭的重要原料。
+
+木炭的燃燒木炭孔隙多，與空氣的接觸面大，有利於燃燒。燃燒過程分兩個階段,第1階段：木炭的表面吸附氧氣進行氧化反應生成一氧化碳和二氧化碳;第2階段：二氧化碳與碳吸熱和還原生成一氧化碳；同時，一氧化碳進行氧化再生成二氧化碳和放出熱量。熱量的發生促使溫度上升和反應加速，當溫度達到著火點時，即開始並繼續進行燃燒。灰分對燃燒也有影響，如將木炭脫去灰分則著火點上升。黑炭由於有較多的揮發分，著火早，升溫快，但燃燒時間短。白炭著火遲，但燃燒時間較長。
+
+展望燒製木炭雖損失了30～50％的能源，但具有薪柴所沒有的優點。在工業已開發國家被用作輔助燃料和工業原料，在開發中國家仍是重要的能源。隨著人口的增加和森林資源的減少,木炭的供應日趨緊張。因此,充分利用各種類型的廢材，建立專用的薪炭林，研究改進炭化工藝等將是必要的措施。 
+  </div>
+  
+</div>
+
+</body>
+</html>

@@ -51,34 +51,69 @@
                     <li class="nav-item">
                         <a class="nav-link" href="網頁設計.html">網頁設計</a>
                     </li>
-                    <li class="nav-item">
+                    <li class="nav-item dropdown">
                         <a class="nav-link" href="程式設計.html">程式設計</a>
+                        <a class="nav-link dropdown-toggle" data-toggle="dropdown" data-target="dropdown_target"></a>
+                        <div class="dropdown-menu" aria-labelledby="dropdown_target">
+                            <ul class="navbar-nav">
+                                <a class="dropdown-item" href="Android.html">Android</a>
+                                <a class="dropdown-item" href="PC.html">PC</a>
+                            </ul>
+                        </div>
                     </li>
                 </ul>    
             </div>
             </nav>    
         </header>
         <main role="main" class="inner cover">
-            <div class="r2" data-aos="zoom-in-up">
-                <div class="card-columns">
-                    <figure class="figure">
-                        <img src="Image\網頁設計\Web01.PNG" class="figure-img img-fluid rounded" style="max-height: 300px;" alt="...">
-                        <figcaption class="figure-caption text-left">幻燈片+卡片效果</figcaption>
-                    </figure>
-                    <figure class="figure">
-                        <img src="Image\網頁設計\WebA01.PNG" class="figure-img img-fluid rounded" style="max-height: 300px;" alt="...">
-                        <figcaption class="figure-caption text-left">用Dreamweaver表格製作網頁</figcaption>
-                    </figure>
-                    <figure class="figure">
-                        <img src="Image\網頁設計\WebB01.PNG" class="figure-img img-fluid rounded" style="max-height: 300px;" alt="...">
-                        <figcaption class="figure-caption text-left">崁入影片與Google地圖</figcaption>
-                    </figure>
-                    <figure class="figure">
-                        <img src="Image\網頁設計\WebC01.PNG" class="figure-img img-fluid rounded" style="max-height: 300px;" alt="...">
-                        <figcaption class="figure-caption text-left">使用外掛程式完成放大圖片功能</figcaption>
-                    </figure>
+            <div class="text-dark">
+                <div class="jumbotron">
+                    <img src="Image/網頁設計/WebA01.PNG" class="card-img-top" alt="..." style="height: 20rem;width: auto;">
+                    <div class="card-body  text-left">
+                      <h5 class="card-title">動物圖片集</h5>
+                      <p class="card-text">使用Dreamweaver的網格製作的動物圖片集。</p>
+                      <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalLong"target="iframe_web" onclick="iframe_web.location.href='/Web1/W1index.html'">查看</button>
+                    </div>
+                  </div>
+                  <div class="jumbotron">
+                    <img src="Image/網頁設計/WebB01.PNG" class="card-img-top" alt="..." style="height: 20rem;width: auto;">
+                    <div class="card-body  text-left">
+                      <h5 class="card-title">麻糬DIY</h5>
+                      <p class="card-text">使用Dreamweaver製作，並運用崁入製作的網頁。</p>
+                      <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalLong"target="iframe_web" onclick="iframe_web.location.href='/Web2/W2index.html'">查看</button>
+                    </div>
+                  </div>
+                  <div class="card">
+                    <img src="Image/網頁設計/WebC01.PNG" class="card-img-top" alt="...">
+                    <div class="card-body  text-left">
+                      <h5 class="card-title">商品頁面</h5>
+                      <p class="card-text">使用外掛式套件製作的商品頁面</p>
+                      <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalLong"target="iframe_web" onclick="iframe_web.location.href='/Web3/W3index.html'">查看</button>
+                    </div>
+                  </div>
                 </div>
-            </div>    
+            <!-- Modal -->
+            <div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+              <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLongTitle">Modal title</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                  </div>
+                  <div class="modal-body">
+                    <div class="Web-Iframe-box">
+                        <iframe src="/Web1/W1index.html" style="width: 100%;height: 40rem;" name="iframe_web"></iframe> 
+                    </div>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
         </main>
         <footer class="mastfoot">
             <div class="inner">
