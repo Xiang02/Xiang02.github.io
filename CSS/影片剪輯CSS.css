@@ -1,0 +1,25 @@
+.Tab-Box{
+    background-image: url(/Image/影片剪輯/TV-BG.png);
+}
+.Tab-Box::after{
+    content: "";
+    background-color: rgb(255, 255, 255);
+    position: absolute;
+    z-index: -1;
+    box-shadow: 0 0px 5px rgb(236, 236, 236),
+                0 0px 30px rgb(255, 255, 255),
+                0 0px 50px rgb(255, 255, 255),
+                0 0px 150px rgb(255, 255, 255),
+                0 0px 200px rgb(255, 255, 255);
+    height: 15%;
+    width: 80%;
+    border-radius: 50%;
+    left: 0;
+    right: 0;
+    transform: rotateX(80deg);
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: auto;
+    margin-bottom: 0;
+    bottom: -50px;
+}

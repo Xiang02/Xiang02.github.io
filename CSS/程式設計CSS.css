@@ -1,0 +1,25 @@
+main{
+    margin: auto;
+    bottom: 0;
+    top: 0;
+}
+.D-btn-Box{
+    margin: 50px;
+}
+.D-btn{
+    width: 100%;
+    height: auto;
+    font-family: Impact, Charcoal, sans-serif;
+    color: white;
+    background-color: transparent;
+    border: 5px solid white;
+    border-radius: 12px;
+    cursor: pointer;
+    transition-duration: 0.5s;
+}
+.D-btn:hover{
+    background-color: #555555;
+    padding: 50px;
+    border-radius: 150px;
+
+}
