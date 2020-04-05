@@ -67,7 +67,7 @@
         </header>
         <main role="main" class="inner cover">
             <div class="text-dark">
-                <div class="jumbotron">
+                <div class="jumbotron"data-aos="zoom-in-up">
                     <img src="Image/網頁設計/WebA01.PNG" class="card-img-top" alt="..." style="height: 20rem;width: auto;">
                     <div class="card-body  text-left">
                       <h5 class="card-title">動物圖片集</h5>
@@ -75,7 +75,7 @@
                       <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalLong"target="iframe_web" onclick="iframe_web.location.href='/Web1/W1index.html'">查看</button>
                     </div>
                   </div>
-                  <div class="jumbotron">
+                  <div class="jumbotron"data-aos="zoom-in-up">
                     <img src="Image/網頁設計/WebB01.PNG" class="card-img-top" alt="..." style="height: 20rem;width: auto;">
                     <div class="card-body  text-left">
                       <h5 class="card-title">麻糬DIY</h5>
@@ -83,7 +83,7 @@
                       <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalLong"target="iframe_web" onclick="iframe_web.location.href='/Web2/W2index.html'">查看</button>
                     </div>
                   </div>
-                  <div class="card">
+                  <div class="jumbotron"data-aos="zoom-in-up">
                     <img src="Image/網頁設計/WebC01.PNG" class="card-img-top" alt="...">
                     <div class="card-body  text-left">
                       <h5 class="card-title">商品頁面</h5>
@@ -108,6 +108,7 @@
                     </div>
                   </div>
                   <div class="modal-footer">
+                    <input type="button" value="新分頁開啟" class="btn btn-danger" onclick="OpenNew()"></button>
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
                   </div>
                 </div>
@@ -124,6 +125,10 @@
 
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script>
+      function OpenNew(){
+        var x = iframe_web.location.href;
+        window.open(x,'_blank');
+      }
       AOS.init();
     </script>
 </body>

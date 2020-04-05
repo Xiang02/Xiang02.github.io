@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
     <title>影片剪輯</title>
     <link rel="stylesheet" type="text/css" href="CSS\分頁CSS.css">
+    <link rel="stylesheet" type="text/css" href="CSS\影片剪輯CSS.css">
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
@@ -98,21 +99,41 @@
             </div>
             </nav>    
         </header>
-        <main role="main" class="inner cover">
-                <div class="embed-responsive embed-responsive-16by9" data-aos="zoom-out-right">
-                    <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/qcwFNQcU4PA" allowfullscreen></iframe>
+        <main class="inner Tab-Box p-3" data-aos="zoom-in">
+            <nav>
+                <div class="nav nav-tabs" id="nav-tab" role="tablist">
+                  <a class="nav-item nav-link active" id="nav-m1-tab" data-toggle="tab" href="#nav-m1" role="tab" aria-controls="nav-m1" aria-selected="true">文字特效1</a>
+                  <a class="nav-item nav-link" id="nav-m2-tab" data-toggle="tab" href="#nav-m2" role="tab" aria-controls="nav-m2" aria-selected="false">文字特效2</a>
+                  <a class="nav-item nav-link" id="nav-m3-tab" data-toggle="tab" href="#nav-m3" role="tab" aria-controls="nav-m3" aria-selected="false">景深效果</a>
+                  <a class="nav-item nav-link" id="nav-m4-tab" data-toggle="tab" href="#nav-m4" role="tab" aria-controls="nav-m4" aria-selected="false">兒時趣事</a>
+                  <a class="nav-item nav-link" id="nav-m5-tab" data-toggle="tab" href="#nav-m5" role="tab" aria-controls="nav-m5" aria-selected="false">3D效果</a>
                 </div>
-                <div class="embed-responsive embed-responsive-16by9" data-aos="zoom-out-left">
-                    <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/LlSyztCWXC0" allowfullscreen></iframe>
+            </nav>
+            <div class="tab-content" id="nav-tabContent">
+                <div class="tab-pane fade show active" id="nav-m1" role="tabpanel" aria-labelledby="nav-m1-tab">
+                    <div class="embed-responsive embed-responsive-16by9">
+                        <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/qcwFNQcU4PA" allowfullscreen></iframe>
+                    </div>    
                 </div>
-                <div class="embed-responsive embed-responsive-16by9" data-aos="zoom-out-right">
-                    <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/ig-IyngOkT0" allowfullscreen></iframe>
+                <div class="tab-pane fade" id="nav-m2" role="tabpanel" aria-labelledby="nav-m2-tab">
+                    <div class="embed-responsive embed-responsive-16by9" data-aos="zoom-out-left">
+                        <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/LlSyztCWXC0" allowfullscreen></iframe>
+                    </div>
                 </div>
-                <div class="embed-responsive embed-responsive-16by9" data-aos="zoom-out-left">
-                    <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/dNc2ilh00Mc" allowfullscreen></iframe>
+                <div class="tab-pane fade" id="nav-m3" role="tabpanel" aria-labelledby="nav-m3-tab">
+                    <div class="embed-responsive embed-responsive-16by9" data-aos="zoom-out-right">
+                        <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/ig-IyngOkT0" allowfullscreen></iframe>
+                    </div>
                 </div>
-                <div class="embed-responsive embed-responsive-16by9" data-aos="zoom-out-right">
-                    <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/VgmcgpLghOQ" allowfullscreen></iframe>
+                <div class="tab-pane fade" id="nav-m4" role="tabpanel" aria-labelledby="nav-m4-tab">
+                    <div class="embed-responsive embed-responsive-16by9" data-aos="zoom-out-left">
+                        <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/dNc2ilh00Mc" allowfullscreen></iframe>
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="nav-m5" role="tabpanel" aria-labelledby="nav-m5-tab">
+                    <div class="embed-responsive embed-responsive-16by9" data-aos="zoom-out-right">
+                        <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/VgmcgpLghOQ" allowfullscreen></iframe>
+                    </div>
                 </div>
             </div>    
         </main>
