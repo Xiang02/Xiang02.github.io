@@ -23,3 +23,37 @@ main{
     border-radius: 150px;
 
 }
+svg{
+    display: block;
+    position: absolute;
+    z-index: 0;
+}
+.SVG-AN{
+    left: 0;
+    bottom: 0;
+}
+.SVG-PC{
+    right: 0;
+    bottom: 0;
+}
+.Line-AN{
+    stroke-dasharray: 1500;
+    stroke-dashoffset: 1500;
+    animation: dash 1s  linear forwards ;
+}
+.Line-PC{
+    stroke-dasharray: 1500;
+    stroke-dashoffset: 1500;
+    animation: dash 1s  linear forwards ;
+}
+@keyframes dash {
+    to {
+      stroke-dashoffset: 0;
+    }
+}
+@media (max-width: 1000px) {
+    svg{display: none;}
+}
+@media (min-width: 1200px) {
+    svg{display: block;}
+}
