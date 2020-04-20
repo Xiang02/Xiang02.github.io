@@ -13,6 +13,9 @@ html,body{
 .cover-container {
     max-width: 42em;
 }
+.cover-container-Big {
+    max-width: 80em;
+}
 .inner{
     color: white;
 }

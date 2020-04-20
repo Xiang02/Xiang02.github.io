@@ -12,12 +12,12 @@ svg{
 }
 .LineDrew{
     width: 0px;
-    height: 500px;
+    height: 250px;
     animation: Line-dash 0.5s 1s linear forwards ;
 }
 @keyframes Line-dash {
     0%{width: 0px;height:250px;}
-    100%{width: 500px;height: 500px;}
+    100%{width: 250px;height: 250px;}
 }
 @keyframes dash {
     to {

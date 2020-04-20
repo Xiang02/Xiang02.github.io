@@ -1,6 +1,3 @@
-.Tab-Box{
-    background-image: url(/Image/影片剪輯/TV-BG.png);
-}
 .Tab-Box::after{
     content: "";
     background-color: rgb(255, 255, 255);
